@@ -75,6 +75,9 @@ func main() {
 	}
 }
 
+/*
+ TODO test
+*/
 func stringToFirstLetterSearch(input string) (output string) {
 	//convert strings to rune array then to int arrray
 	runes := []int32([]rune(input))
