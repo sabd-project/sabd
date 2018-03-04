@@ -14,7 +14,7 @@ const dbName = "iGurbani.sqlite"
 const dbURL = "https://www.dropbox.com/sh/qazoft8own8u1na/AADXugSSY0IjqPw2qP1tkL3oa?dl=1" // TODO move to s3
 
 func main() {
-	l := log.New(os.Stderr, "", 0)
+	l := log.New(os.Stdout, "", 0)
 
 	dbPath := os.TempDir() + databasePath + dbName
 
@@ -26,6 +26,7 @@ func main() {
 		if err != nil {
 			l.Fatal(err2)
 		}
+
 		// now download file
 		err3 := downloadFile(dbPath, dbURL)
 		if err3 != nil {
